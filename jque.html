@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+    <style>
+        .child {
+            height: 100px;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="row parent">
+        <div class="col-4 child">
+
+        </div>
+        <div class="col-4 child">
+
+        </div>
+        <div class="col-4 child">
+
+        </div>
+    </div>
+    <div class="container parent">
+        <div class="col-4 child">
+
+        </div>
+        <div class="col-4 child">
+
+        </div>
+        <div class="col-4 child">
+
+        </div>
+    </div>
+    <script>
+        $(document).ready(function() {
+            $(".child:first-child").hide(function() {
+                $(".child:first-child").show(function() {
+                    $(".child:eq(1)").fadeOut(400).delay(1000).fadeIn(4000);
+                    $(".child:eq(1)").css({
+                        backgroundColor: "red"
+                    });
+//                    $(".child").parent(".container").hide();
+                    $(".child").parent(".container>.child:eq(1)").css({backgroundColor:"red"});
+                    $(".child").parents(".container:eq(2)").show();
+                    $(".container>.child:eq(2)").click(function(){
+                        $(".container>child:eq(1)").css({backgroundColor:"green"});
+                        $(".child:eq(5)").css({backgroundColor:"green"});
+                        $(".container>.child:eq(0)").html('<p>hello there</p>');
+                        $(".child:eq(0)").html('<h1>hello there</h1>');
+                    })
+                    
+                })
+            })
+        });
+    </script>
+</body>
+
+</html>

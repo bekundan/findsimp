@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <style>
+        .main *{
+            display: block;
+            border: 2px solid black;
+            padding: 5px;
+            margin: 15px;
+        }
+    </style>
+</head>
+<body>
+   <div class="container main">
+       <div>
+           this is the parenth 
+           <p>this is the paragraph</p>
+           <span>this is span box</span>
+           <h1>this is heading 1</h1>
+           <h2>this is heading 2</h2>
+       </div>
+   </div>
+    <script>
+    $(document).ready(function(){
+        $("h1").siblings().css({
+            "color":"red",
+            "border":"2px solid green"
+            
+            
+        });
+        $("div").children().css({
+            "color":"blue",
+            "border":"2px solid red"
+        })
+    });
+    </script>
+</body>
+</html>

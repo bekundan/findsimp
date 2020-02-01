@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <style>
+        .row {
+            margin: 250px 50px;
+            border-style: dashed;
+            justify-content: center;
+        }
+
+        .child {
+            height: 100px;
+            border-style: solid;
+            margin: 10px;
+        }
+
+        .child1 {
+            height: 100px;
+            border-style: solid;
+            margin: 10px;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+      <ul>
+          <li><a href="#firstrow">first Row </a> </li>
+          <li><a href="#secondrow">Secend row </a> </li>
+      </ul>
+        <div class="row" id="firstrow">
+            <div class="col-3 child ">
+                <h1 class="text-center">1</h1>
+            </div>
+            <div class="col-3 child test bg-denger"></div>
+            <div class="col-3 child ">
+                <h1 class="text-center">3
+                </h1>
+            </div>
+<!--            <img src="../image/c1.jpg" style="height: 200px; width: 200px; " class="img-fluid" alt="">-->
+        </div>
+        <!--row-->
+        <div id="firstrow" style="height:2000px;"></div>
+        <div id="secondrow" class="row" style="height: 100px; background-color: blue;"></div>
+    </div>
+    <!--container-fluid-->
+    <script>
+        $(document).ready(function() {
+            //            $(".child").click(function() {
+            //                $(".child").removeClass("child1")
+            //                $(this).addClass("child1");
+            //                $(this).attr('class','col-3 child demo');
+            //                alert($(this).attr('class'));
+            //                $("img").hover(function(){
+            //                    $(this).attr('src','../image/c2.jpg');
+            //                })
+            ////            })
+//            $(".test").dblclick(function() {
+//                $(this).hide(4000).delay(2000).show(2000);
+//
+//            });
+//            $(document).scroll(function(){
+//                               console.log($("#firstrow").offset().top-$(window).scrollTop());
+////                console.log($(window).scrollTop()-
+//                if($("#firstrow").offset().top-$(window).scrollTop() <=90)
+//                    $("#firstrow").fadeOut();
+//                               })
+           $("a").click(function(e){
+               e.preventDefault();
+               target=$(this.hash).offset().top;
+               $("html").animate({
+                   scrollTop:target
+               },4000);
+           })
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+             <div class="container-fluid">
+                 <div class="row">
+                   <div class="col-2"></div>
+                  
+                    <div class="col-8 mt-5 text-center main">
+                      <h3 class="text-center display-4">Get Avtar as  Your Name </h3>
+                      
+                     <div class="box">
+                       
+                        <label for="Name">ENter Your Name Here</label><br>
+                        <input type="text" class="form-input" id="name">
+                        <div class="img mt-5">
+                            <img id="img" src="./image/c1.jpg" width="200" height="200" alt="">
+                        </div>
+                        <button type="submit" class="btn btn-primary m-3">Click to Show</button>
+                    
+                     </div>
+                     
+                    </div>
+                     <div class="col-2"></div>
+                     
+                 </div>
+             </div>
+       
+       <script>
+        $(document).ready(function(){
+            $(".btn").click(function(){
+                const name =$("#name").val();
+//                console.log(name);
+                $("#img").attr('src',`https://joeschmoe.io/api/v1/${name}`);
+            })
+        })
+    </script>
+</body>
+</html>

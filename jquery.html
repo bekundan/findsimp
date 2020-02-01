@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <style>
+        .box{
+            height: 500px;
+            width: 500px;
+            background-color: black;
+            position: absolute;
+        }
+        .newbox{
+/*
+            height: 500px;
+            width: 500px;
+*/
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="box" id="box">
+        
+    </div>
+    <script>
+    $(document).ready(function(){
+        $('#box').click(function(){
+//                        $(this).css({width:'700px',height:'200px'});
+                      $(this).fadeOut(5000);
+                    $(this).html('<div style="height:200px; width:200px; background-color: green; position:absolute; top:30%; left:30%" </div>')
+                        
+                        });
+    })
+    </script>
+    
+</body>
+</html>

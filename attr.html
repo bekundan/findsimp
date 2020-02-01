@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <style>
+        .test{
+            height: 200px;
+            width: 200px;
+        }
+        .load{
+            height: 200px;
+            width: 200px;
+            background-color: fuchsia;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row parent">
+            <div class="col-4 child">
+
+            </div>
+            <div class="col-4 child test" id="ch2" kun="hell no">
+
+            </div>
+            <div class="col-4 child" id="alert" nancy=”laptop”>
+
+            </div>
+        </div>
+        <div class="row high"></div>
+        <div class="load">
+            
+        </div>
+    </div>
+    <script>
+        $(document).click(function() {
+//            alert($("#alert").attr("nancy"));
+//
+//            $("#alert").attr("nancy", "mobile")
+//            alert($("#alert").attr("nancy"));
+            $("div").has(".test").css({border:"1px solid black"});
+            $(".test").toggleClass(".load");
+            alert($("#ch2").attr("kun"));
+           $("#ch2").attr("kun","hell yeah");
+            alert($("#ch2").attr("kun"));
+        })
+    </script>
+</body>
+
+</html>
